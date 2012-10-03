@@ -17,3 +17,7 @@ ul {
 	---webkit-border-radius: 40px;
 	border-radius: 40px
 }
+
+span.error {
+	visibility: hidden;
+}
