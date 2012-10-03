@@ -1,0 +1,5 @@
+# Heroku + Static HTML
+
+If you found this, I'm confident that you know how to use it.
+
+Just checkout the project and push it into a clean Heroku `Cedar stack` instance.
