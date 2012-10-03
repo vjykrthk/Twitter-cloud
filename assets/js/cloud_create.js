@@ -19,15 +19,20 @@
 
 	function get_tweets(response) {
 			console.log(response)
-			var tweets = response.query.results.statuses.status
-			var t = [];
-			for (i = 0; i < tweets.length; i++) {
-				l = tweets[i].text.split(" ").length;
+			try {
+				var tweets = response.query.results.statuses.status
+				var t = [];
+				for (i = 0; i < tweets.length; i++) {
+					l = tweets[i].text.split(" ").length;
 
-				t[l] = (t[l] == undefined) ? 1 : t[l] +1
-				console.log(t[l])
+					t[l] = (t[l] == undefined) ? 1 : t[l] +1
+						console.log(t[l])
+				}
+				built_freq_val_object_array(t);
+			} catch(err) {
+				$("span.error").show();
 			}
-			built_freq_val_object_array(t);
+			
 	}
 
 	function built_freq_val_object_array(t) {
